@@ -13,8 +13,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/floostack/transcoder"
-	"github.com/floostack/transcoder/utils"
+	"github.com/wangzewang/transcoder"
+	"github.com/wangzewang/transcoder/utils"
 )
 
 // Transcoder ...
@@ -192,7 +192,7 @@ func (t *Transcoder) validate() error {
 }
 
 // GetMetadata Returns metadata for the specified input file
-func (t *Transcoder) GetMetadata() ( transcoder.Metadata, error) {
+func (t *Transcoder) GetMetadata() (transcoder.Metadata, error) {
 
 	if t.config.FfprobeBinPath != "" {
 		var outb, errb bytes.Buffer
