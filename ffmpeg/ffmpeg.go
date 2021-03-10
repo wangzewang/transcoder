@@ -83,6 +83,7 @@ func (t *Transcoder) Start(opts transcoder.Options) (<-chan transcoder.Progress,
 
 	// Initialize command
 	cmd := exec.Command(t.config.FfmpegBinPath, args...)
+	fmt.Println("ffmpeg command is :", cmd.String())
 
 	// If progresss enabled, get stderr pipe and start progress process
 	if t.config.ProgressEnabled && !t.config.Verbose {
