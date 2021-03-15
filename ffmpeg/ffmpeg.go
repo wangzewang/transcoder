@@ -56,7 +56,7 @@ func (t *Transcoder) Start(opts transcoder.Options) (<-chan transcoder.Progress,
 	}
 
 	// Append input file and standard options
-	args := append([]string{"-vsync", "0", "-hwaccel", "cuvid", "-c:v", "h264_cuvid", "-i", t.input}, opts.GetStrArguments()...)
+	args := append([]string{"-vsync", "0", "-hwaccel", "cuvid", "-hwaccel_output_format", "cuda", "-i", t.input}, opts.GetStrArguments()...)
 	outputLength := len(t.output)
 	optionsLength := len(t.options)
 
